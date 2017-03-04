@@ -3,13 +3,8 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Cadastro de produtos</title>
-</head>
-<body>
+<%@taglib tagdir="/WEB-INF/tags" prefix="cdc"%>
+<cdc:page title="cadastro de produtos">
 	<c:url value="/products" var="url" />
 	<form:form action="${spring:mvcUrl('PC#save').build()}" method="post"
 		commandName="product" enctype="multipart/form-data">
@@ -54,5 +49,4 @@
 		</div>
 
 	</form:form>
-</body>
-</html>
+</cdc:page>
